@@ -1,0 +1,8 @@
+#  Enables or disables plugin
+enable-plugin: true
+
+#  Determines if mending can only be enchanted with the maximum enchantment tier (30 levels)
+only-max-level-enchants: true
+
+#  Determines the chance of the player receiving the mending enchantment
+mending-enchantment-percent-chance: 10
