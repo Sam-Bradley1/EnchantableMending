@@ -12,6 +12,7 @@ public final class EnchantableMending extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        loadConfig();
         // Register the event listener
         getServer().getPluginManager().registerEvents(this, this);
         getLogger().info("Plugin enabled successfully!");
@@ -30,4 +31,13 @@ public final class EnchantableMending extends JavaPlugin implements Listener {
 
         item.addEnchantment(Enchantment.MENDING, 1);
     }
+
+    public void loadConfig()
+    {
+        saveDefaultConfig();
+        boolean pluginEnabled = getConfig().getBoolean("enable-plugin");
+        boolean onlyMaxLvlEnchants = getConfig().getBoolean("only-max-level-enchants");
+        int mendingChance = getConfig().getInt("mending-enchantment-percent-chance");
+    }
+
 }
