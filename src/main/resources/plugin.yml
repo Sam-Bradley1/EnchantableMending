@@ -1,0 +1,4 @@
+name: EnchantableMending
+version: '${project.version}'
+main: me.samstarplugins.enchantablemending.EnchantableMending
+api-version: '1.20'
