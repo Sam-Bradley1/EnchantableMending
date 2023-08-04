@@ -54,7 +54,7 @@ public final class EnchantableMending extends JavaPlugin implements Listener {
             return;
         }
         if (randomNumber < mendingChance) {
-            item.addEnchantment(Enchantment.MENDING, 1);
+            item.addUnsafeEnchantment(Enchantment.MENDING, 1);
         }
 
 
