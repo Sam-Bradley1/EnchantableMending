@@ -15,7 +15,6 @@ public final class EnchantableMending extends JavaPlugin implements Listener {
 
     private static final int MAX_LEVEL = 30;
 
-    private boolean pluginEnabled;
     private boolean onlyMaxLvlEnchants;
     private int mendingChance;
 
@@ -52,7 +51,7 @@ public final class EnchantableMending extends JavaPlugin implements Listener {
     public void loadConfig() {
         saveDefaultConfig();
 
-        pluginEnabled = getConfig().getBoolean("enable-plugin", true);
+        boolean pluginEnabled = getConfig().getBoolean("enable-plugin", true);
 
         if (!pluginEnabled) {
             getLogger().info("[EnchantableMending] Plugin disabled by configuration");
